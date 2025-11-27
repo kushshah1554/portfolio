@@ -149,7 +149,7 @@ export default function Portfolio() {
               <Mail className="w-6 h-6" />
             </a>
           </div>
-          <a href='/files/Kush Shah Cv.pdf' download="KUSH_SHAH_CV">
+          <a href='/files/Kush_Shah_CV.pdf' download="KUSH_SHAH_CV">
 
           
           <button 
