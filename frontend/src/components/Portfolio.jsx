@@ -12,10 +12,10 @@ export default function Portfolio() {
   const [formStatus, setFormStatus] = useState('');
 
   const skills = {
-    frontend: ['React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS', 'Redux'],
+    frontend: ['React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS', 'Redux','TypeScript'],
     backend: ['Node.js', 'Express.js', 'RESTful APIs', 'Authentication & Authorization'],
-    database: ['MongoDB', 'Mongoose', 'SQL'],
-    tools: ['Git', 'GitHub', 'npm', 'Postman', 'VS Code']
+    database: ['MongoDB', 'MySQL'],
+    tools: ['Git','GitHub','Postman', 'VS Code']
   };
 
   const projects = [
@@ -153,7 +153,7 @@ export default function Portfolio() {
 
           
           <button 
-            className="bg-linear-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 px-8 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto transition transform hover:scale-105"
+            className="bg-linear-to-r cursor-pointer from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 px-8 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto transition transform hover:scale-105"
           >
             <Download className="w-5 h-5" />
             Download CV
