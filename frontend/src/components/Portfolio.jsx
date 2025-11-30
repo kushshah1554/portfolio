@@ -149,9 +149,9 @@ export default function Portfolio() {
               <Mail className="w-6 h-6" />
             </a>
           </div>
-          <a href='/files/Kush_Shah_CV_1.pdf' download="KUSH_SHAH_CV">
 
           
+          <a href='/files/Kush_Shah_CV.pdf' download="KUSH_SHAH_CV">
           <button 
             className="bg-linear-to-r cursor-pointer from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 px-8 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto transition transform hover:scale-105"
           >
