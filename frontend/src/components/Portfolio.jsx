@@ -140,7 +140,7 @@ of what's possible on the web.`,
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 // ── Replace this URL with your actual photo path later ──────────
-const PHOTO_URL = "/img/me.jpg"; // ← swap with your local path e.g. "/images/me.jpg"
+const PHOTO_URL = "/img/me.jpeg"; // ← swap with your local path e.g. "/images/me.jpg"
 
 // Map icon string keys → Lucide components
 const ICON_MAP = { Code2, Server, Database, Layers, Cpu, Wrench, Brain };
@@ -151,13 +151,17 @@ function SkillIcon({ name }) {
 
 /* ─── Custom Cursor ──────────────────────────────────────────── */
 function CustomCursor() {
-  const dot    = useRef(null);
-  const ring   = useRef(null);
-  const pos    = useRef({ x: -100, y: -100 });
+  const dot  = useRef(null);
+  const ring = useRef(null);
+
+  // ✅ Only render on devices with a fine pointer (mouse)
+  const isPointerFine = typeof window !== "undefined" &&
+    window.matchMedia("(pointer: fine)").matches;
 
   useEffect(() => {
+    if (!isPointerFine) return; // bail out on touch devices
+
     const move = (e) => {
-      pos.current = { x: e.clientX, y: e.clientY };
       gsap.to(dot.current,  { x: e.clientX, y: e.clientY, duration: 0.05, ease: "none" });
       gsap.to(ring.current, { x: e.clientX, y: e.clientY, duration: 0.28, ease: "power2.out" });
     };
@@ -170,7 +174,10 @@ function CustomCursor() {
       el.addEventListener("mouseleave", shrink);
     });
     return () => window.removeEventListener("mousemove", move);
-  }, []);
+  }, [isPointerFine]);
+
+  // ✅ Render nothing on touch/tablet devices
+  if (!isPointerFine) return null;
 
   return (
     <>
@@ -861,7 +868,7 @@ export default function Portfolio() {
                 { Icon: Mail,     label: "Email",    value: PORTFOLIO.contact.email,    href: `mailto:${PORTFOLIO.contact.email}` },
                 { Icon: Phone,    label: "Phone",    value: PORTFOLIO.contact.phone,    href: `tel:${PORTFOLIO.contact.phone}` },
                 { Icon: Github,   label: "GitHub",   value: "kushshah1554",             href: PORTFOLIO.contact.github },
-                { Icon: Linkedin, label: "LinkedIn", value: "kush-shah-8186a9336",      href: PORTFOLIO.contact.linkedin },
+                { Icon: Linkedin, label: "LinkedIn", value: "kush Shah",      href: PORTFOLIO.contact.linkedin },
               ].map(({ Icon, label, value, href }) => (
                 <a
                   key={label}
