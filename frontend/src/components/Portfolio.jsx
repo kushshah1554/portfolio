@@ -29,7 +29,7 @@ const PORTFOLIO = {
   initials: "KS",
   role: "Full-Stack Developer",
   tagline: "I build scalable web apps — pixel to server.",
-  location: "India",
+  location: "Nepal,Kathmandu",
   resumeUrl: "/files/Kush_Shah_CV.pdf", // ← path to your resume
 
   about: `I'm a passionate Full-Stack Developer specialising in modern,
