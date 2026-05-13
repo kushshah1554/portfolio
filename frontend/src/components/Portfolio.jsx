@@ -89,6 +89,7 @@ of what's possible on the web.`,
         "REST APIs",
         "Redis",
         "RabbitMQ",
+        "WebSockets",
       ],
     },
     {
@@ -97,7 +98,7 @@ of what's possible on the web.`,
       items: ["Prisma ORM", "Drizzle ORM"],
     },
     {
-      category: "Databases & Vector DBs",
+      category: "Databases & Vector DBs", 
       icon: "Database",
       items: ["MongoDB", "PostgreSQL", "MySQL", "Qdrant (Vector DB)"],
     },
@@ -127,27 +128,24 @@ of what's possible on the web.`,
   // ── Projects ─────────────────────────────────────────────────
   // Add a new object to this array to add a project
   projects: [
-    {
-      title: "Lavio AI Agent",
-      description:
-        "Modern full-stack AI assistant with web browsing, image understanding, and PDF-grounded answers. Built with LangChain and Groq-powered LLMs for ultra-fast inference, Qdrant vector search for RAG workflows, and secure Better Auth sessions.",
-      tech: [
-        "Next.js",
-        "React 19",
-        "TypeScript",
-        "LangChain",
-        "LangGraph",
-        "Prisma",
-        "MongoDB",
-        "Qdrant",
-        "Cloudinary",
-        "Tailwind CSS",
-      ],
-      liveUrl: "",
-      githubUrl: "https://github.com/kushshah1554/Lavio-AI-Agent",
-      year: "2025",
-      isLive: false,
-    },
+   {
+  title: "LiveScore",
+  description:
+    "Real-time multi-sport live score backend system supporting live match tracking, structured commentary streaming, and instant score updates. Built with WebSockets for low-latency event-driven communication, enabling clients to subscribe to matches and receive live updates without polling.",
+  tech: [
+    "Node.js",
+    "Express.js",
+    "TypeScript",
+    "PostgreSQL",
+    "Drizzle ORM",
+    "WebSockets",
+    "Zod",
+  ],
+  liveUrl: "",
+  githubUrl: "https://github.com/kushshah1554/LiveScore",
+  year: "2025",
+  isLive: false,
+},
     {
       title: "ImageGallery",
       description:
@@ -164,23 +162,6 @@ of what's possible on the web.`,
       githubUrl: "https://github.com/kushshah1554/ImageGallery_App",
       year: "2024",
       isLive: true,
-    },
-    {
-      title: "Learnly",
-      description:
-        "Full-stack Learning Management System where instructors can create courses, manage lessons, and bulk-upload media. Students can enroll, track progress, view structured lesson content, and pay via eSewa.",
-      tech: [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Tailwind CSS",
-        "Payment Gateway",
-      ],
-      liveUrl: "",
-      githubUrl: "https://github.com/kushshah1554/Learnly",
-      year: "2025",
-      isLive: false,
     },
     {
       title: "Task Management System",
